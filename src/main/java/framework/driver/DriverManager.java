@@ -1,18 +1,16 @@
 package framework.driver;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 
 public class DriverManager {
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            System.setProperty(
-                    "webdriver.chrome.ChromeDriver",
-                    "/usr/local/bin/chromedriver-bin"
-            );
-            driver = new ChromeDriver();
+            SafariOptions safariOptions = new SafariOptions();
+            driver = new SafariDriver(safariOptions);
         }
         return driver;
     }

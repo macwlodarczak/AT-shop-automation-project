@@ -12,4 +12,10 @@ public class DriverSettings {
         driver = new ChromeDriver(options);
         return driver;
     }
+
+    public static void maximizeWindow(WebDriver driver) {
+         driver.manage().window().maximize();
+    }
+
+
 }

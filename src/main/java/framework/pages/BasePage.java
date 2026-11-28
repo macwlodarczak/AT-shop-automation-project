@@ -1,8 +1,10 @@
 package framework.pages;
 
+import framework.utils.ConfigManager;
 import framework.waits.WaitManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 
 public class BasePage {
     protected WebDriver driver;
@@ -22,8 +24,17 @@ public class BasePage {
         driver.findElement(locator).sendKeys(text);
     }
 
-    protected String getText(By locator) {
+    public String getText(By locator) {
         waitManager.waitForElementVisible(locator);
         return driver.findElement(locator).getText();
     }
+
+     public void getPage(String property){
+        driver.get(property);
+    }
+
+    public static String hostUrl() {
+        return ConfigManager.getProperty("app.url");
+    }
+
 }
