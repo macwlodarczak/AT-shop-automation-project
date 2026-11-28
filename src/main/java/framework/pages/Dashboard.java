@@ -10,8 +10,9 @@ public class Dashboard extends BasePage{
         super(driver);
     }
 
-    public By getWelcomeUserTitle() {
-        return welcomeUserTitle;
+
+    public String getWelcomeTitle() {
+        return getText(welcomeUserTitle);
     }
 
 }

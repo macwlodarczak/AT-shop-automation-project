@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverSettings {
 
-    public static WebDriver setHeadlessMode(WebDriver driver) {
+    public static WebDriver setHeadlessMode_Chrome(WebDriver driver) {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         driver = new ChromeDriver(options);

@@ -24,7 +24,7 @@ public class BasePage {
         driver.findElement(locator).sendKeys(text);
     }
 
-    public String getText(By locator) {
+    protected String getText(By locator) {
         waitManager.waitForElementVisible(locator);
         return driver.findElement(locator).getText();
     }

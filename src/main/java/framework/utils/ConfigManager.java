@@ -14,7 +14,7 @@ public class ConfigManager {
         try (FileInputStream input = new FileInputStream(path)) {
             properties.load(input);
         } catch (IOException e) {
-            throw new RuntimeException("Nie udało się załadować pliku konfiguracyjnego dla środowiska: " + env, e);
+            throw new RuntimeException("Faild on load config file from environment: " + env, e);
         }
     }
 
